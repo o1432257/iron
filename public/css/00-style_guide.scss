@@ -1,0 +1,177 @@
+
+ // 色彩
+    $colorRed:#960014;
+    $colorOringe:#D8A33B;
+    $colorGray:#1A1A1A;
+    $colorWhite:#FFFFFF;
+    $colorRedOpacitySeventy:rgba(#960014, 0.7);
+    $colorRedOpacityTwelve:rgba(#960014, 0.12);
+    $colorOringeOpacity:rgba(#D8A33B, 0.5);
+    $colorLight:rgba(#E9D9B7, 0.5);
+    $colorDark:rgba(#000000, 0.7);
+    $colorDate:#808080;
+    $colorCardContent:#333333;
+    $colorCardNew:#F7931E;
+
+
+
+// 文字大小
+    $fontSize_H1:60px;
+    $fontSize_H2:36px;
+    $fontSize_H3:25px;
+    $fontSize_H4:20px;
+    $fontSize_H5:18px;
+    $fontSize_H6:14px;
+// 微軟正黑體
+    $fontFamily_Micro_JH :'Microsoft JhengHei';
+// 文字字距
+    $letterSpacing_Hundred:1px;
+    $letterSpacing_Fifty:0.5px;
+// 文字粗體
+    .font_bold{
+        font-weight: bold;
+    }
+
+// 元件
+    // 分類1-按鈕
+    .btn_classification{
+        width: 168px;
+        height: 43px;
+        background-color:$colorRed;
+        border:1px solid  $colorRed;
+
+        color:$colorWhite;
+        font-size: $fontSize_H4;
+        letter-spacing: $letterSpacing_Hundred;
+        &:hover{
+            background-color:$colorWhite;
+            color:$colorRed;
+        }
+    };
+
+    // 更多文章-按鈕
+    .btn_more{
+        width: 428px;
+        height: 58px;
+        background-color:$colorRed;
+        border:1px solid  $colorRed;
+
+        color:$colorWhite;
+        font-size: $fontSize_H3;
+        letter-spacing: $letterSpacing_Hundred;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background-color:$colorWhite;
+            color:$colorRed;
+        }
+    }
+
+
+    // Top-Icon
+    .icon_top{
+        width: 113.255px;
+        height: 113.255px;
+        background-color: #D8A33B;
+
+        font-size:$fontSize_H3;
+        color: #FFFFFF;
+        letter-spacing: $letterSpacing_Hundred;
+        // 字距還沒定義
+        // 箭頭ICON要定義?
+        &:hover{
+            background-color:#960014;
+        }
+    }
+    // 卡片的定義
+    .card{
+        width: 370px;
+        height: 600px;
+
+        font-size: $fontSize_H4;
+        letter-spacing: $letterSpacing_Fifty;
+    }
+        // 小的分類1
+        .card_classification{
+            min-width: 60px;
+            // height: 25px;
+            background-color:$colorRed;
+            opacity: 0.8;
+
+            color:$colorWhite;
+            font-size:16px;
+            max-width: 84%;
+
+            // display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card_picture{
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+        }
+        .card_date{
+            color: $colorDate;
+            display: flex;
+        }
+        .card_introduction {
+            color:$colorRed;
+            letter-spacing: $letterSpacing_Hundred;
+            &:hover{
+                color:$colorOringe;
+            }
+        }
+        .card_content{
+            letter-spacing: $letterSpacing_Hundred;
+            color:$colorCardContent;
+        }
+        .btn_continue{
+            color:$colorOringe;
+            &:hover{
+                color:$colorRed;
+            }
+        }
+        // 底下的 關鍵字 串
+        .key_word{
+            color:$colorRed;
+            font-size:$fontSize_H4;
+            letter-spacing: $letterSpacing_Hundred;
+            text-decoration: underline;
+            &:hover{
+                color:$colorOringe;
+            }
+        }
+        // facebook twitter line
+        $opacityIneractivePlatform:0.5;
+        .img_facebook{
+            height: 30px;
+            &:hover{
+                opacity: $opacityIneractivePlatform;
+            }
+        }
+        .img_twitter{
+            height: 30px;
+            &:hover{
+                opacity: $opacityIneractivePlatform;
+            }
+        }
+        .img_line{
+            height: 30px;
+            &:hover{
+                opacity: $opacityIneractivePlatform;
+            }
+        }
+        // 中文 全部的下拉式選單(內容字體顏色記得要改成紅色)
+        .language{
+            font-size:$fontSize_H5 ;
+            letter-spacing: 0;
+            color:$colorWhite ;
+        }
+        .dorp_down_all{
+            font-size:$fontSize_H4 ;
+            letter-spacing: $letterSpacing_Hundred;
+            color:$colorWhite ;
+        }

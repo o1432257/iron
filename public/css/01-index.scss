@@ -1,0 +1,898 @@
+@import"00-style_guide.scss";
+body{
+    margin:0;
+    padding: 0;
+    font-family: $fontFamily_Micro_JH;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+    main{
+        width: 100%;
+        height: auto;
+        background-color:rgba(233, 217, 183, 0.5);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        // 替navbar保留的空間
+        @media screen and (max-width:768px){
+            top:90px;
+            margin-bottom: 90px;
+        }
+        @media screen and (max-width:576px){
+            top:70px;
+            margin-bottom: 70px;
+        }
+        .banner_outside{
+            width: 1920px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            @media screen and (max-width:768px){
+                width: 1136px;
+            }
+            @media screen and (max-width:500px){
+                width: 100%;
+                left: 0;
+                transform: translateX(0);
+            }
+            .banner_group{
+                width: 100%;
+                height: 1040px;
+                position: relative;
+                z-index: 2;
+                @media screen and (max-width:768px){
+                    height: 600px;
+                }
+                @media screen and (max-width:500px){
+                    height: auto;
+                }
+                @media screen and (max-width:320px){
+                    height: 170px;
+                }
+                @media screen and (max-width:319px){
+                    height: auto;
+                }
+                .img_banner{
+                    width: 100%;
+                    display: none;
+                    position: absolute;
+                    @media screen and (max-width:500px){
+                        display: initial;
+                    }
+                }
+                .banner{
+                    width:100%;
+                    height: 100%;
+                    background-size: cover;
+                    position: absolute;
+                    @media screen and (max-width:500px){
+                        display: none;
+                    }
+                }
+                .word_banner{
+                    width: 522px;
+                    height: 290px;
+                    color: $colorWhite;
+                    font-weight: 600;
+                    position: absolute;
+                    z-index: 8;
+
+                    top: 345px;
+                    left: calc(50% - 241px);
+                    color: $colorWhite;
+
+                    // text-shadow: black 0.2em 0.2em 0.4em;
+                    @media screen and (max-width:768px){
+                        top: 95px;
+                    }
+                    @media screen and (max-width:500px){
+                        width: 200px;
+                        height: 100px;
+                        top: 40px;
+                        left: calc(50% - 100px);
+                    }
+                    @media screen and (max-width:360px){
+                        top: 30px;
+                    }
+                    @media screen and (max-width:330px){
+                        top: 25px;
+                    }
+                    @media screen and (max-width:325px){
+                        top: 20px;
+                    }
+                    @media screen and (max-width:320px){
+                        top: 15px;
+                    }
+                    @media screen and (max-width:319px){
+                        top: 0px;
+                    }
+                    p{
+                        margin: 0;
+                        padding: 0;
+                    }
+                    br{
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .word_industry {
+                        width: 100%;
+
+                        font-size: 70px;
+                        letter-spacing: 0.2em;
+                        text-align: center;
+                        margin: 0;
+                        padding: 0;
+
+                        @media screen and (max-width:500px){
+                            font-size: 30px;
+                        }
+                    }
+                    .word_in {
+                        text-align: center;
+                        width: 100%;
+                        font-size: 50px;
+                        font-weight: initial;
+                        letter-spacing: 0.05em;
+
+                        margin: 30px 0;
+                        @media screen and (max-width:768px){
+                            margin: 0px 0;
+                        }
+                        @media screen and (max-width:500px){
+                            font-size: 25px;
+                        }
+                    }
+
+                    .word_taiwan {
+                        width: 100%;
+                        text-align: center;
+                        font-size: 70px;
+                        letter-spacing: 0.2em;
+                        @media screen and (max-width:768px){
+                            margin-bottom: 55px;
+                        }
+                        @media screen and (max-width:500px){
+                            font-size: 30px;
+                            margin-bottom: 35px;
+                        }
+                        @media screen and (max-width:460px){
+                            margin-bottom: 25px;
+                        }
+                        @media screen and (max-width:430px){
+                            margin-bottom: 20px;
+                        }
+                        @media screen and (max-width:415px){
+                            margin-bottom: 15px;
+                        }
+                        @media screen and (max-width:405px){
+                            margin-bottom: 10px;
+                        }
+                        @media screen and (max-width:400px){
+                            margin-bottom: 5px;
+                        }
+                        @media screen and (max-width:390px){
+                            margin-bottom: 0;
+                        }
+                        @media screen and (max-width:380px){
+                            margin-bottom: -5px;
+                        }
+                        @media screen and (max-width:370px){
+                            margin-bottom: -10px;
+                        }
+                    }
+                    .icon_banner{
+                        width: 150px;
+                        font-weight:initial;
+                        position: relative;
+                        top:200px ;
+                        left: calc(50% - 95px);
+                        z-index: 8;
+                        @media screen and (max-width:1279px){
+                            line-height:1.8;
+                        }
+                        @media screen and (max-width:768px){
+                            top: 55px;
+                        }
+                        @media screen and (max-width:500px){
+                            display: none;
+                        }
+                        .scroll_word{
+                            width: 100%;
+                            color: $colorWhite;
+                            font-size: 18px;
+                            letter-spacing: 0;
+                            text-align: center;
+                            margin-bottom: 26px;
+                            @media screen and (max-width:768px){
+                                margin-bottom: 10px;
+                            }
+                        }
+                        .scroll_img{
+                            width: 30px;
+                            height: 60px;
+                            overflow: hidden;
+                            position: absolute;
+                            left: calc(50% - 15px);
+                            animation-name: runing;
+                            animation-duration: 2s;
+                            animation-iteration-count:infinite;
+                            @keyframes runing {
+                                0%{
+                                    height: 0px;
+                                }
+                                100%{
+                                    height: 110px;
+                                }
+                            }
+                            .img_scroll{
+                                width: 30px;
+                                height: 60px;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+                .icon_banner_arrow{
+                    width: 30px;
+                    height: 10px;
+                   text-align: center;
+                    z-index: 9;
+                    display: none;
+                    @media screen and (max-width:500px){
+                        display: initial;
+                    }
+                    .fa-angle-down{
+                        font-size: 30px;
+                        font-weight: initial;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            // 背景三角形
+            .bg_group{
+                width: 100%;
+                height: 3150px;
+                position: relative;
+                z-index: 3;
+                margin-top: 166px;
+                @media screen and (max-width:768px){
+                    height: 1300px;
+                    margin-top: 475px;
+                }
+                @media screen and (max-width:540px){
+                    margin-top: 505px;
+                }
+                @media screen and (max-width:514px){
+                    margin-top: 530px;
+                }
+                @media screen and (max-width:500px){
+                    margin-top: 915px;
+                }
+                @media screen and (max-width:460px){
+                    margin-top: 865px;
+                }
+                @media screen and (max-width:420px){
+                    margin-top: 850px;
+                }
+                @media screen and (max-width:410px){
+                    margin-top: 840px;
+                }
+                @media screen and (max-width:380px){
+                    margin-top: 830px;
+                }
+                @media screen and (max-width:370px){
+                    margin-top: 820px;
+                }
+                @media screen and (max-width:358px){
+                    margin-top: 880px;
+                }
+                @media screen and (max-width:320px){
+                    margin-top: 600px;
+                }
+                .left_triangle{
+                    width: 1114px;
+                    height: 2226px;
+                    clip-path:polygon(0 0,0% 100%, 100% 50%);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    @media screen and (max-width:768px){
+                        left: 184px;
+                        top: 200px;
+                        width: 400px;
+                        height: 800px;
+                    }
+                    @media screen and (max-width:500px){
+                        width: 100px;
+                        height: 200px;
+                        top: 100px;
+                        left: 0px;
+                    }
+                    @media screen and (max-width:468px){
+                        top: 100px;
+                    }
+                    @media screen and (max-width:320px){
+                        top: 200px;
+                    }
+                    .big_triangle{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .big_bg{
+                        width: 100%;
+                        height: 100%;
+                        background-color:$colorOringeOpacity ;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+                .right_top_triangle{
+                    width: 510px;
+                    height: 1020px;
+                    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    @media screen and (max-width:1279px){
+                        right: 50px;
+                    }
+                    @media screen and (max-width:1100px){
+                        right: 100px;
+                    }
+                    @media screen and (max-width:1000px){
+                        right: 150px;
+                    }
+                    @media screen and (max-width: 768px){
+                        right: 184px;
+                        width: 200px;
+                        height: 400px;
+                    }
+                    @media screen and (max-width: 500px){
+                        right: 0px;
+                        width: 100px;
+                        height: 200px;
+                    }
+                    @media screen and (max-width: 320px){
+
+                    }
+                    .top_small_triangle{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .small_top_bg{
+                        width: 100%;
+                        height: 100%;
+                        background-color:$colorOringeOpacity ;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+                .right_bottom_triangle{
+                    width: 680px;
+                    height: 1360px;
+                    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    @media screen and (max-width:1279px){
+                        right: 50px;
+                    }
+                    @media screen and (max-width:1100px){
+                        right: 100px;
+                    }
+                    @media screen and (max-width:1000px){
+                        right: 150px;
+                    }
+                    @media screen and (max-width: 768px){
+                        right: 184px;
+                        width: 200px;
+                        height: 400px;
+                    }
+                    @media screen and (max-width: 500px){
+                        right: 0px;
+                        width: 100px;
+                        height: 200px;
+                    }
+                    @media screen and (max-width: 320px){
+
+                    }
+                    .bt_small_triangle{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .small_bottom_bg{
+                        width: 100%;
+                        height: 100%;
+                        background-color:$colorOringeOpacity ;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+            }
+            // 白色的背景
+            .bg_white{
+                width: 100%;
+                height: 685px;
+                background-color: $colorWhite;
+                position: absolute;
+                top: 1030px;
+                z-index: 1;
+                @media screen and (max-width:768px){
+                    top: 590px;
+                    height: 685px;
+                }
+                @media screen and (max-width:540px){
+                    height: 715px;
+                }
+                @media screen and (max-width:514px){
+                    height: 740px;
+                }
+                @media screen and (max-width:500px){
+                    top: 274px;
+                }
+                @media screen and (max-width:470px){
+                    top: 244px;
+                }
+                @media screen and (max-width:460px){
+                    top: 225px;
+                }
+                @media screen and (max-width:420px){
+                    top: 210px;
+                }
+                @media screen and (max-width:410px){
+                    top: 200px;
+                }
+                @media screen and (max-width:380px){
+                    top: 190px;
+                }
+                @media screen and (max-width:370px){
+                    top: 180px;
+                }
+                @media screen and (max-width:359px){
+                    top: 80px;
+                    height: 900px;
+
+                }
+                @media screen and (max-width:320px){
+                    top: 20px;
+                    height: 850px;
+                }
+            }
+        }
+        // 跟Banner一樣大小的空白框，要定位內文用的
+        .banner_group_size_block{
+            width: 100%;
+            height: 1040px;
+            @media screen and (max-width:768px){
+                height: 600px;
+            }
+            @media screen and (max-width:500px){
+                height: 264px;
+            }
+            @media screen and (max-width:460px){
+                height: 235px;
+            }
+            @media screen and (max-width:420px){
+                height: 220px;
+            }
+            @media screen and (max-width:410px){
+                height: 210px;
+            }
+            @media screen and (max-width:380px){
+                height: 200px;
+            }
+            @media screen and (max-width:370px){
+                height: 190px;
+            }
+            @media screen and (max-width:355px){
+                height: 180px;
+            }
+            @media screen and (max-width:330px){
+                height: 175px;
+            }
+            @media screen and (max-width:320px){
+                height: 170px;
+            }
+            @media screen and (max-width:300px){
+                height: 140px;
+            }
+        }
+        // 內容
+        .container_group{
+            max-width: 1170px;
+            width: 100%;;
+            margin: auto;
+            position: relative;
+            z-index: 8;
+
+            // 文章卡片資訊
+            .my-container{
+                 width: 100%;
+                 .logo_group_first{
+                    margin-top:100px;
+                    margin-bottom:90px;
+                    @media screen and (max-width:320px){
+                        margin-top:60px;
+                        margin-bottom: 50px;
+                        padding-top: 40px;
+                    }
+                }
+            }
+                // 齒輪
+                .logo_group{
+                    width: 288px;
+                    margin: auto;
+                    @media screen and (max-width:768px){
+                        margin-bottom: 50px;
+                    }
+                    .logo{
+                        width: 60px;
+                        height: 60px;
+                        margin: auto;
+                        margin-bottom: 30px;
+                        @media screen and (max-width:320px){
+                            margin-bottom: 15px;
+                        }
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .logo_title{
+                        width: 100%;
+                        display: flex;
+                        .logo_title_line{
+                            width: 60px;
+                            height: 2px;
+                            background-color:$colorRed ;
+                            margin: auto;
+                        }
+                        .logo_title_word{
+                            color:$colorRed;
+                            font-size: $fontSize_H3;
+                            letter-spacing: $letterSpacing_Hundred;
+                            margin: auto;
+                            @media screen and (max-width:320px){
+                                width:110px;
+                            }
+                        }
+                    }
+                }
+                .text{
+                    max-width: 570px;
+                    width: 90%;
+                    margin: auto;
+                    margin-bottom: 235px;
+
+                    font-size: $fontSize_H4;
+                    letter-spacing: 0.1rem;
+                    line-height:28px;
+
+                    text-align: center;
+                    @media screen and (max-width:320px){
+                        max-width: 290px;
+                        margin-bottom: 110px;
+                    }
+                    hr{
+                        border: 0 solid white;
+                        height: $fontSize_H4;
+                        margin: 0;
+                    }
+                }
+            .logo_group_second{
+                margin-bottom:100px;
+                @media screen and (max-width:730px){
+                    margin-bottom:40px;
+                }
+            }
+            // 文章資訊  圖片
+            .cards_info{
+                width: 100%;
+                margin: auto;
+                @media screen and (max-width:1279px){
+                    width: calc(100% - 60px);
+                }
+                @media screen and (max-width:350px){
+                    width: 291px;
+                }
+                @media screen and (max-width:320px){
+                    margin-top: -15px;
+                }
+                a{
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+                // 鋼鐵人、精密工具的字跟分段的紅線
+               .cards_group_title{
+                    width: 100%;
+                    min-width: 290px;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: auto;
+                    .cards_group_title_line{
+                        height: 1px;
+                        background-color:$colorRed ;
+                        margin: auto;
+                    }
+                    .cards_group_title_word{
+                        color:$colorRed;
+                        font-size: $fontSize_H3;
+                        letter-spacing: $letterSpacing_Hundred;
+                        text-align: center;
+                    }
+                    .short_word{
+                        width: 166px;
+                        @media screen and (max-width:320px){
+                            width: 85px;
+                        }
+                    }
+                    .short_word_line{
+                        width: calc(50% - 88px);
+                        @media screen and (max-width:320px){
+                            width: calc(50% - 42.5px);
+                        }
+                    }
+                    .long_word{
+                        width: 164px;
+                    }
+                    .long_word_line{
+                        width: calc(50% - 82px);
+                    }
+                }
+                // 卡片群組
+                .cards_group{
+                    max-width: 1170px;
+                    width: 100%;
+                    margin-top: 30px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    @media screen and (max-width:768px){
+                        margin-bottom: -13px;
+                    }
+                    // 單張卡片
+                    .card{
+                        margin-bottom: 30px;
+                        background-color:$colorWhite;
+                        border: initial;
+                        margin-right: 30px;
+                        height: 645px;
+
+                        // 卡片陰影
+                        -webkit-box-shadow: 0 0 15px -10px #000000;
+                        -moz-box-shadow: 0 0 15px -10px #000000;
+                        box-shadow: 0 0 15px -10px #000000;
+
+                        position: relative;
+                        @media screen and (max-width:1279px){
+                            width: calc(33.333% - 20px);
+                        }
+                        @media screen and (max-width:1000px){
+                            width:calc(50% - 15px);
+                        }
+                        @media screen and (max-width:550px){
+                            width: 100%;
+                            height: auto;
+                        }
+                        @media screen and (max-width:320px){
+                            max-width: 300px;
+                            max-height: 500px;
+                            font-size: $fontSize_H4;
+                        }
+
+
+
+
+                        // 卡片的圖
+                        .card_classification{
+                            padding: 0 10px;
+                            position: absolute;
+                            left: 30px;
+                            top: 20px;
+                        }
+                        .card_picture{
+                            height: 250px;
+                            background-size: cover;
+                            background-position: center;
+                            @media screen and (max-width:1279px){
+                                height: 230px;
+                            }
+                            @media screen and (max-width:767px){
+                                height: 195px;
+                            }
+                            @media screen and (max-width:650px){
+                                height: 225px;
+                            }
+                            // @media screen and (max-width:1200px) {
+                            //     // width: 350px;
+                            //     width: calc(100% + 2px);
+                            //     height: 30vw;
+
+                            // }
+                            // @media screen and (max-width:768px) {
+                            //     height: 35vw;
+                            // }
+                            // @media screen and (max-width:700px) {
+                            //     height: 38vw;
+                            // }
+                            // @media screen and (max-width:650px) {
+                            //     height: 40vw;
+                            // }
+                            // @media screen and (max-width:540px) {
+                            //     height: 60vw;
+                            // }
+                            // @media screen and (max-width:320px) {
+                            //     height: 193px;
+                            // }
+                        }
+                        // 卡片內文
+                        .card_padding{
+                            width: 100%;
+                            height:350px ;
+                            padding: 45px 30px;
+                            word-wrap:break-word;
+                            @media screen and (max-width:320px){
+                                padding: 25px 12px;
+                            }
+                            .card_date{
+                                margin-bottom: 10px;
+                                @media screen and (max-width:767px){
+                                    margin-bottom: 30px;
+                                }
+                                @media screen and (max-width:320px){
+                                    margin-bottom: 20px;
+                                }
+                                // 移除P的初始值
+                                P{
+                                    margin: 0;
+                                }
+                                .new_word_group{
+                                    display: flex;
+                                    .verticle_line{
+                                        width: 1px;
+                                        height: 20px;
+                                        background-color:$colorDate;
+                                        margin: auto;
+                                        margin-left: 15px;
+                                        margin-right: 15px;
+                                    }
+                                    .card_new_word{
+                                        color:$colorCardNew;
+                                    }
+                                }
+                                .nw_active{
+                                    display: none;
+                                }
+                            }
+                            .card_introduction{
+                                margin-bottom: 30px;
+
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                white-space: normal;
+
+                                @media screen and (max-width:767px){
+                                font-size: $fontSize_H4;
+                                }
+                                @media screen and (max-width:320px){
+                                    margin-bottom: 20px;
+                                }
+                            }
+                            .card_content{
+                                height: 85px;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 3;
+                                -webkit-box-orient: vertical;
+                                white-space: normal;
+                            }
+                        }
+                        .btn_continue{
+                            position: absolute;
+                            right: 30px;
+                            bottom: 45px;
+                            // 位置
+                            @media screen and (max-width:767px){
+                                right: 15px;
+                                bottom: 20px;
+                            }
+                        }
+                    }
+                    .card:nth-child(2n){
+                        @media screen and (max-width:1000px) {
+                            margin-right: 0px;
+                        }
+                    }
+                    .card:nth-child(3n){
+                        margin-right: 0px;
+                        @media screen and (max-width:1000px) {
+                            margin-right: 30px;
+                        }
+                    }
+                    .card:nth-child(6n){
+                        @media screen and (max-width:1000px){
+                            margin-right: 0px;
+                        }
+                    }
+                    .card:nth-child(n){
+                        @media screen and (max-width:540px) {
+                            margin-right: 0px;
+                        }
+                    }
+                    .disapear.card:nth-child(3n){
+                        @media screen and (max-width:1000px) {
+                            display: none;
+                        }
+                        @media screen and (max-width:540px) {
+                            display: flex;
+                        }
+                    }
+
+                    .card_hidden{
+                        display: initial;
+                        @media screen and (max-width:1100px){
+                            display: none;
+                        }
+                    }
+                }
+                .btn_more{
+                    width: 430px;
+                    margin-bottom: 80px;
+                    margin: auto;
+                    position: relative;
+                    margin-top: 30px;
+                    @media screen and (max-width:730px){
+                        width: 290px;
+                        margin-bottom: 150px;
+                    }
+                    i{
+                        position: absolute;
+                        right: 40px;
+                        @media screen and (max-width:730px){
+                            right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,369 @@
+@import "00-style_guide.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    .banner {
+        .inside_banner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-image: url("/images/Banner.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @media (max-width: 1200px) {
+                // width: 100vh;
+                // background-size: contain;
+                padding-top: 80px;
+            }
+
+            @media (max-width: 768px) {
+                margin-top: 80px;
+                height: 160px;
+            }
+        }
+
+        .inside_page_title_position {
+            position: relative;
+            width: 1170px;
+            margin: auto;
+
+            // padding-top: 300px;
+            @media (max-width: 1200px) {
+                width: 90%;
+            }
+
+            .inside_page_title {
+                color: $colorWhite;
+                // color: $colorDark;
+
+                font-size: $fontSize_H2;
+
+                position: absolute;
+                bottom: 137px;
+
+                @media (max-width: 1200px) {
+                    // width: 90%;
+                    // left: 4.5%;
+                    // padding-top: 228px;
+                    // margin-bottom: 80px;
+                }
+
+                @media (max-width: 768px) {
+                    color: $colorDark;
+                    // position: absolute;
+                    position: unset;
+                    bottom: -148px;
+                    left: 27px;
+                    // left: 10%;
+                }
+            }
+        }
+        .page {
+            background-color: $colorWhite;
+            // width: 90%;
+            width: 1170px;
+            margin: auto;
+
+            // padding-left: 54px;
+            @media (max-width: 1200px) {
+                width: 90%;
+            }
+
+            .mycontainer {
+                // width: 1170px;
+                padding-bottom: 50px;
+
+                // margin: auto;
+                @media screen and (max-width: 1180px) {
+                    padding-bottom: 50px;
+                }
+
+                @media screen and (max-width: 710px) {
+                    width: 350px;
+                }
+
+                @media screen and (max-width: 768px) {
+                    padding-bottom: 20px;
+                }
+
+                @media screen and (max-width: 710px) {
+                    padding-bottom: 30px;
+                }
+
+                .now_page {
+                    a {
+                        text-decoration: none;
+                    }
+
+                    padding-top: 20px;
+
+                    @media screen and (max-width: 320px) {
+                        font-size: $fontSize_H6;
+                    }
+
+                    .index {
+                        font-size: $fontSize_H5;
+                        color: $colorDate;
+                    }
+
+                    .arrow {
+                        font-size: $fontSize_H5;
+                        color: $colorDate;
+                        margin: 0px 10px;
+                    }
+
+                    .in_page {
+                        font-size: $fontSize_H5;
+                        color: $colorRedOpacitySeventy;
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        @media (max-width: 768px) {
+            margin-top: -20px;
+        }
+        .inside_container {
+            margin: auto;
+            // 1172/1280
+            width: 1170px;
+            // height: 290px;
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(242, 242, 242);
+            border-right: 9px solid $colorRed;
+
+            @media (max-width: 1200px) {
+                width: 90%;
+            }
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                border-right: 0px;
+                border-bottom: 9px solid $colorRed;
+                // height: 740px;
+                // margin-top: 86px;
+                margin-top: 40px;
+                padding: 27px;
+                padding-bottom: 0;
+            }
+
+            @media (max-width: 576px) {
+                // width: 286px;
+
+                // height: 600px;
+            }
+
+            .intro_pic {
+                // 448/1280
+                // width: 450px;
+                // width: 35%;
+                max-width: 450px;
+                min-width: 450px;
+                height: 280px;
+                // margin-right: 25px;
+                margin: auto 0;
+                margin-top: 0;
+
+                // background-image: url('/images/card_imgs/rob-lambert-64186-unsplash.jpg');
+                // background-size: contain;
+                // background-repeat: no-repeat;
+                // background-position: center;
+                @media (max-width: 768px) {
+                    // max-width: 650px;
+                    // width: 100%;
+                    // max-height: 420px;
+                    // max-width: 140%;
+                    min-width: 100%;
+
+                    // margin: auto;
+                    // width: 120%;
+                    // width: unset;
+                    // height: 420px;
+                }
+
+                @media (max-width: 576px) {
+                    min-width: unset;
+                    max-width: 100%;
+                    // min-height: 170px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                    //   size: contain;
+                    //   position: center;
+                    @media (max-width: 768px) {
+                        // max-width: 100%;
+                        // width: 90%;
+                    }
+
+                    @media (max-width: 730px) {
+                        //   width: 90%;
+                        //   height: unset;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    // 645/768
+                    // width: 645px;
+                    // width: 84vw;
+                    // width: 100%;
+                    // margin: auto;
+
+                    // 227/271
+                    // 645/768
+
+                    // height: 420px;
+                    height: 54vw;
+                    background-size: contain;
+                }
+
+                @media (max-width: 576px) {
+                    // width: 258px;
+                    // width: 518px;
+                    // width: 90%;
+                    // 修
+                    // height: 168px;
+                    // margin: 18px;
+                }
+            }
+
+            table {
+                @media (max-width: 576px) {
+                    // border-collapse: collapse;
+                    // border-spacing: 0;
+                }
+            }
+
+            tr,
+            td {
+                @media (max-width: 576px) {
+                    // padding: 0;
+                }
+            }
+
+            .small_intro_card {
+                // margin: 27px auto;
+                // margin-left: 25px;
+                // margin-right: 25px;
+                // margin: 27px;
+                padding: 27px;
+                // width: 500px;
+                // height: 100%;
+
+                @media (max-width: 768px) {
+                    // margin: 0px 27px 27px 27px;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+                .tr {
+                    // margin-bottom: 10px;
+                    display: flex;
+                    flex-direction: row;
+
+                    @media (max-width: 576px) {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .detail {
+                        min-width: 100px;
+                        color: $colorRed;
+                        font-size: $fontSize_H4;
+
+                        // line-height: 22px;
+                        @media (max-width: 768px) {
+                            padding: 0;
+                        }
+                    }
+
+                    .input {
+                        // line-height: 22px;
+
+                        font-size: $fontSize_H4;
+                        // text-overflow : ellipsis;
+                        word-break: break-all;
+                    }
+                }
+            }
+        }
+    }
+
+    .DIY_content {
+        width: 1170px;
+        // height: 1000px;
+
+        margin: auto;
+        margin-top: 45px;
+        // margin-left: 60px;
+
+        // padding-left: 54px;
+        // display: flex;
+        .DIY {
+            word-wrap: wrap break-word;
+            // display: flex;
+            * {
+                word-wrap: wrap break-word;
+                img{
+                    max-width: 100% !important;
+                }
+                * {
+                    word-wrap: wrap break-word;
+                    img{
+                        max-width: 100% !important;
+                    }
+                }
+                * {
+                    word-wrap: wrap break-word;
+                    img{
+                        max-width: 100% !important;
+                    }
+                }
+                * {
+                    word-wrap: wrap break-word;
+                    img{
+                        max-width: 100% !important;
+                    }
+                }
+            }
+            img{
+                max-width: 100% !important;
+            }
+        }
+        @media (max-width: 1200px) {
+            width: 90%;
+        }
+
+        .serch_word_box {
+            margin-top: 90px;
+            display: flex;
+
+            @media (max-width: 576px) {
+                margin-top: 40px;
+            }
+
+            a {
+                color: $colorRed;
+            }
+        }
+    }
+
+    .color_red {
+        color: $colorRed;
+    }
+}
